@@ -2,7 +2,7 @@
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api.routers import router 
+from app.api.router import router
 from app.core.config import GITHUB_TOKEN
 
 ## --- Initialize FastAPI Application ---
@@ -28,6 +28,6 @@ app.include_router(router, prefix="/api/v1")
 
 
 ## --- Root Endpoint ---
-@app.get("/")
-async def root():
-    return {"message": "Welcome to the GitHub Repository Control API"}
+# @app.get("/")
+# def root():
+#     return {"message": "Welcome to the GitHub Repository Control API"}
